@@ -4,134 +4,183 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace assignment_2
+namespace assignment_4
 {
-    internal class Program
-    {
+
+
+    //internal class Program
+    //{
+
+    //    //1.Name,Stdid,grade Student is passed or not
+    //    abstract class Grade
+    //    {
+    //        public string name;
+    //        public int studid;
+    //        public float grade;
+    //        abstract public Boolean Ispassed(float grade);
+    //    }
+    //    class undergraduate : Grade
+    //    {
+    //        public override Boolean Ispassed(float grade)
+    //        {
+    //            Console.WriteLine("Enter Name of the Student is:");
+    //            name = Console.ReadLine();
+    //            Console.WriteLine("Student Name:{0}", name);
+    //            Console.WriteLine("Enter Student Id is:");
+    //            studid = Convert.ToInt32(Console.ReadLine());
+    //            Console.WriteLine("StudentId:{0}", studid);
+    //            grade = Convert.ToInt32(Console.ReadLine());
+    //            Console.WriteLine("grade:{0}", grade);
+    //            if (grade >= 70.0)
+    //            {
+    //                Console.WriteLine("Student Grade is: ");
+    //                return true;
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("Student Grade is: ");
+    //                return false;
+    //            }
+    //        }
+    //    }
+    //    class graduate : Grade
+    //    {
+    //        public override Boolean Ispassed(float grade)
+    //        {
+    //            Console.WriteLine("Enter Name of the Student is:");
+    //            name = Console.ReadLine();
+    //            Console.WriteLine("Student Name:{0}", name);
+    //            Console.WriteLine("Enter Student Id:");
+    //            studid = Convert.ToInt32(Console.ReadLine());
+    //            Console.WriteLine("StudentId:{0}", studid);
+    //            if (grade >= 80.0)
+    //            {
+    //                Console.WriteLine("Student's Grade is: ");
+    //                return true;
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("Student's Grade is: ");
+    //                return false;
+    //            }
+    //        }
+    //    }
+    //    class Abstract
+    //    {
+    //        public static void undergraduate()
+    //        {
+    //            undergraduate ungrd = new undergraduate();
+    //            Console.WriteLine(ungrd.Ispassed(70.0f));
+    //            graduate grd = new graduate();
+    //            Console.WriteLine(grd.Ispassed(80.0f));
+    //        }
+
+
+    //        //2.Create a emp class empId int,empName,string,salary float
+    //        public class Employee
+    //        {
+    //            public int empId;
+    //            public string empName;
+    //            public float sal;
+
+    //            public Employee(int empId, string empName, float sal)
+    //            {
+    //                this.empId = empId;
+    //                this.empName = empName;
+    //                this.sal = sal;
+    //            }
+    //            public void dispDetails()
+    //            {
+    //                Console.WriteLine(" The empName {empName} with empid {empId} gets salary of {sal}");
+    //            }
+    //        }
+    //        public class PartTimeemployee
+    //        {
+    //            public int wages = 4500;
+
+    //            public void showDetails()
+    //            {
+    //                Console.WriteLine($"The parttime employee gets is " + wages);
+
+    //            }
+    //            static void Main(string[] args)
+    //            {
+    //                Employee emp = new Employee(436, "pavan", 23500.9f);
+    //                emp.dispDetails();
+    //                PartTimeemployee pte = new PartTimeemployee();
+    //                pte.showDetails();
+    //            }
+    //        }
+    //    }
+
+    //    //3.create a class student and the child classes datscholar and hosteller
+    //    public class Students
+    //    {
+    //        public int std_Id;
+    //        public string std_Name;
+    //        public double exam_fees;
+
+
+    //        public void displayDetails()
+    //        {
+    //            Console.WriteLine("The student {std_Name} with id {std_Id} paid {exam_fees}");
+    //        }
+    //        public void payFees()
+    //        {
+    //            Console.WriteLine("Enter student id: ");
+    //            std_Id = int.Parse(Console.ReadLine());
+    //            Console.WriteLine("Enter the student name: ");
+    //            std_Name = Console.ReadLine();
+    //            Console.WriteLine("The exam fees: is" + 1500);
+    //            Console.WriteLine("Enter the amount  pay examfees");
+    //            exam_fees = int.Parse(Console.ReadLine());
+    //            double sem_fees = 1500 - exam_fees;
+    //            if (exam_fees == 1500)
+    //            {
+    //                Console.WriteLine(" Fees paid no dues");
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("The remaining fees: " + sem_fees);
+    //            }
+    //        }
+    //    }
+    //    class DayScholar
+    //    {
+    //        public double transport_fees;
+
+    //        public DayScholar(double transport_fees)
+    //        {
+    //            this.transport_fees = transport_fees;
+    //            double sem1_fees = 10000 - transport_fees;
+
+    //            Console.WriteLine("The transport fees: " + 10000 + "per year ");
+
+
+    //            Console.WriteLine("the dayscholar  paid {transport_fees} & remaining fee is {sem1_fees}");
+    //            Console.ReadLine();
+    //        }
+
+    //    }
+
         static void Main(string[] args)
         {
-            //find min,max & avg
-            Console.WriteLine("Enter array size");
-            int[] ar = new int[Convert.ToInt32(Console.ReadLine())];
-            for (int i = 0; i < ar.Length; i++)
-            {
-                Console.WriteLine("the elements at " + i);
-                ar[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine("the elements are");
-            for (int i = 0; i < ar.Length; i++)
-            {
-
-                Console.Write(ar[i] + " ");
-            }
-            Console.WriteLine("\nthe average of elements: " + ar.Average());
-            Console.WriteLine("the min element: " + ar.Min() + " " + "and " + "the max element: " + ar.Max());
-
-            //marks
-            Console.WriteLine("\nEnter marks");
-            int[] arr = new int[Convert.ToInt32(Console.ReadLine())];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.WriteLine("the elements at " + i);
-                arr[i] = Convert.ToInt32(Console.ReadLine());
-            }
-
-            Console.WriteLine("the elements are");
-            for (int i = 0; i < arr.Length; i++)
-            {
-
-                Console.Write(arr[i] + " ");
-            }
+            Students students = new Students();
+            students.payFees();
+            students.displayDetails();
+            Console.WriteLine("Enter the tranport fees you to pay: ");
+            DayScholar dayScholar = new DayScholar(int.Parse(Console.ReadLine()));
+            Console.WriteLine("Enter the hostel fee you to pay: ");
+            //Hosteller hosteller = new Hosteller(int.Parse
+            Console.ReadLine();
 
 
 
-
-
-
-
-            ////accept and display String//asscending
-            //Array.Sort(arr);
-            //Console.WriteLine("\narray after sort in ascending order...");
-            //foreach (int i in arr)
-            //{
-            //    Console.Write(i + " ");
-            //}
-
-            ////descending
-            //Array.Reverse(arr);
-            //Console.WriteLine("\narray after sort in descending order...");
-            //foreach (int i in arr)
-            //{
-            //    Console.Write(i + " ");
-            //}
-
-
-
-            //Console.WriteLine("\nthe sum of elements: " + arr.Sum() + " " + "and " + "the average of element: " + arr.Average());
-            //Console.WriteLine("\nthe min element: " + arr.Min() + " " + "and " + "the max element: " + arr.Max());
-
-            //Console.WriteLine("\nEnter a String");
-            //String s1 = Console.ReadLine();
-            //Console.WriteLine("the given input: " + s1 + " " + "\n " + "the length of string: " + s1.Length);
-
-            ////String reverse
-
-            //Console.WriteLine("\nEnter a String");
-            //String s2 = Console.ReadLine();
-            //String revs = "";
-            //for (int i = s2.Length - 1; i >= 0; i--)
-            //{
-            //    revs += s2[i].ToString();
-
-            //}
-            //Console.WriteLine("the reversed String: " + revs);
-
-            ////===string values equal==
-            //Console.WriteLine("\nenter 6th string ");
-            //String s6 = Console.ReadLine();
-            //Console.WriteLine("enter 7th string ");
-            //String s7 = Console.ReadLine();
-            //if (s6 == s7)
-            //{
-            //    Console.WriteLine("string s6 {0} and string s7 {1} are equal ", s6, s7);
-            //}
-            //else
-            //{
-            //    Console.WriteLine("string s6 {0} and string s7 {1} are not equal ", s6, s7);
-            //}
-
-
-            ////palindrome
-            //Console.WriteLine("\nEnter a String");
-            //String s = Console.ReadLine();
-            //String rev = "";
-            //for (int i = s.Length - 1; i >= 0; i--)
-            //{
-            //    rev += s[i].ToString();
-            //}
-            //if (rev == s)
-            //{
-            //    Console.WriteLine("the String is {0} and reversed string is {1} ", s, rev);
-            //}
-            //else
-            //{
-            //    Console.WriteLine("not a palindrome");
         }
-
-        //Console.ReadLine();
-        //}
     }
+
 }
 
-    
-
-
-
-            
-        
-
-
-           
 
 
 
@@ -140,5 +189,28 @@ namespace assignment_2
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
