@@ -1,0 +1,226 @@
+form1
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h1 {
+            color: brown;
+            font-family: roboto;
+            font-weight: bold;
+        }
+
+
+
+        #style1 {
+            background-color: yellow;
+            text-align: center;
+        }
+
+
+
+        .style2 {
+            background-color: black;
+            color: wheat;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+
+
+
+<!--01st Question. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).-->
+
+
+
+<body>
+    <div id="style1">
+        <h1>Sample form 01</h1>
+        Enter 01st no. : <input id="num1" type="text" size="25" /> <br /> <br />
+        Enter 02nd no. : <input id="num2" type="text" size="25" /> <br /> <br />
+
+
+
+        <button onclick="multiply()" class="style2"> Multiply </button> &nbsp;&nbsp;&nbsp;
+        <button onclick="divide()" class="style2"> Divide </button> <br /> <br />
+
+
+
+        <div id="Result"></div> <br />
+    </div>
+    <script type="text/javascript">
+        function multiply() {
+            var one = document.getElementById("num1").value;
+            var two = document.getElementById("num2").value;
+            document.getElementById("Result").innerHTML = "The Result is :" + one * two;
+        }
+        function divide() {
+            var one = document.getElementById("num1").value;
+            var two = document.getElementById("num2").value;
+            document.getElementById("Result").innerHTML = "The Result is :" + one / two;
+        }
+
+
+
+    </script>
+</body>
+</html>
+
+//form2
+<!DOCTYPE html>
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h1 {
+            color: brown;
+            font-family: roboto;
+            font-weight: bold;
+        }
+
+
+
+        #style1 {
+            background-color: red;
+            text-align: center;
+        }
+
+
+
+        .style2 {
+            background-color: black;
+            color: wheat;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!--2nd question. Write a JavaScript program to compute the sum of the given two integers. If the two values are same, then returns triple their sum.-->
+
+
+
+    <body>
+        <div id="style1">
+            <h1>Sample form 02</h1>
+            Enter 01st no. : <input id="num1" type="text" size="25" /> <br /> <br />
+            Enter 02nd no. : <input id="num2" type="text" size="25" /> <br /> <br />
+
+
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="sum()" class="style2"> Print </button> <br /> <br />
+
+
+
+            <div id="result"></div> <br />
+            <div />
+            <script type="text/javascript">
+                function sum() {
+                    var one = parseInt(document.getElementById("num1").value);
+                    var two = parseInt(document.getElementById("num2").value);
+                    if (one == two) {
+                        document.getElementById("result").innerHTML = "The result is :" + (one + two) * 3;
+                    }
+                    else {
+                        document.getElementById("result").innerHTML = "The result is :" + (one + two);
+                    }
+                }
+
+
+
+            </script>
+    </body>
+
+
+
+</body>
+</html>
+
+form3
+<!DOCTYPE html>
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h1 {
+            color: brown;
+            font-family: roboto;
+            font-weight: bold;
+        }
+
+
+
+        #style1 {
+            background-color: blue;
+            text-align: center;
+        }
+
+
+
+        .style2 {
+            background-color: black;
+            color: wheat;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+
+
+
+<!--03rd Question. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if both of them are in the said range, else false.-->
+
+
+
+<body>
+    <div id="style1">
+        <h1>Sample form 03</h1>
+        Enter 01st no. : <input id="num1" type="text" size="25" /> <br /> <br />
+        Enter 02nd no. : <input id="num2" type="text" size="25" /> <br /> <br />
+
+
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="check()" class="style2"> check </button> <br /> <br />
+
+        <div id="result"></div> <br />
+    </div>
+    <script type="text/javascript">
+        function check() {
+            var one = parseInt(document.getElementById("num1").value);
+            var two = parseInt(document.getElementById("num2").value);
+            if ((one > 50 && one < 99) && (two > 50 && two < 99)) {
+                document.getElementById("result").innerHTML = "The result is : " + true;
+            }
+            else {
+                document.getElementById("result").innerHTML = "The result is : " + false;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
